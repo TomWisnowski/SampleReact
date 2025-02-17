@@ -61,18 +61,22 @@ const CheckboxForm = () => {
         <label className="form-check-label">Select All</label>
       </div>
       <form>
-        {fields.map(field => (
-          <div key={field} className="form-check">
-            <input
-              type="checkbox"
-              className="form-check-input"
-              name={field}
-              checked={checkedItems[field] || false}
-              onChange={handleCheckboxChange}
-            />
-            <label className="form-check-label">{field}</label>
-          </div>
-        ))}
+        <div className="row">
+          {fields.map(field => (
+            <div key={field} className="col-md-3">
+              <div className="form-check">
+                <input
+                  type="checkbox"
+                  className="form-check-input"
+                  name={field}
+                  checked={checkedItems[field] || false}
+                  onChange={handleCheckboxChange}
+                />
+                <label className="form-check-label">{field}</label>
+              </div>
+            </div>
+          ))}
+        </div>
       </form>
     </div>
   );
