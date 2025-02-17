@@ -1,11 +1,12 @@
 import React from 'react';
+import CheckboxForm from './CheckboxForm';
 
-const App = () => {
-    return (
-        <div>
-            <h1>Hello, Dad!</h1>
-        </div>
-    );
-};
+function App() {
+  return (
+    <div className="App">
+      <CheckboxForm />
+    </div>
+  );
+}
 
 export default App;
